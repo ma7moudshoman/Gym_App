@@ -19,6 +19,10 @@ public class GymService {
     public Optional<Gym> getCustomerById(long id){
         return gymRepo.findById(id);
     }
+
+    public Boolean exsistById(long id){
+        return gymRepo.existsById(id);
+    }
     public Gym addCustomer(Gym gym){
         return gymRepo.save(gym);
     }
